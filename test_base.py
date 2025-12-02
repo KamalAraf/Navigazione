@@ -19,6 +19,7 @@ def azioni_movimento(mov):
     azioni  = movimento_x + movimento_y
     rapporto = round(movimento_x / movimento_y)
 
+    # logica per la direzione_x
     if (movimento_x < 0):
         direzione_x = -1
     elif (movimento_x == 0):
@@ -26,6 +27,7 @@ def azioni_movimento(mov):
     else (direzione_x):
         direzione_x = 1
 
+    # logica per la direzione_y
     if (movimento_y < 0):
         direzione_y = -1
     elif (movimento_y == 0):
