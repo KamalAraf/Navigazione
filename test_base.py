@@ -15,8 +15,19 @@ def calcola_movimento(pos, nuova_pos):
 def azioni_movimento(mov):
     movimento_x = mov[0]
     movimento_y = mov[1]
+    azioni  = movimento_x + movimento_y
 
-    math.floor(movimento_x[0] / movimento_y[1])
+    rapporto = round(movimento_x / movimento_y)
+
+    direzione_x = 0
+    direzione_y = 0
+
+    if (movimento_x < 0):
+        direzione_x = -1
+    elif (movimento_x = 0):
+        direzione_x = 0
+    else (direzione_x):
+        direzione_x = 1
 
 # Funzione main
 def richiesta():
