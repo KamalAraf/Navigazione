@@ -1,8 +1,36 @@
-pos = [0,0]
-nuova_pos = [0,0]
-movimento = [0,0]
+# Librerie importate
+import math
 
-for i in range(len(movimento)):
-    movimento[i] = nuova_pos[i] - pos[i]
+# Variabili iniziali
+pos = [0, 0]
+nuova_pos = [0, 0]
 
-print(movimento)
+# Funzione per calcolare il movimento dell'asse X e Y
+def calcola_movimento(pos, nuova_pos):
+    mov = [0, 0]
+    mov[0] = nuova_pos[0] - pos[0]
+    mov[1] = nuova_pos[1] - pos[1]
+    return mov
+
+def azioni_movimento(mov):
+    movimento_x = mov[0]
+    movimento_y = mov[1]
+
+    math.floor(movimento_x[0] / movimento_y[1])
+
+# Funzione main
+def richiesta():
+    # Variabili globali
+    global pos, nuova_pos  
+
+    print("posizione successiva (x,y):")
+    nuova_pos[0], nuova_pos[1] = map(int, input().split(","))
+
+    movimento = calcola_movimento(pos, nuova_pos)
+    print("movimento:", movimento)
+
+    # Aggiornamento della posizione
+    pos = nuova_pos.copy()
+
+while True:
+    richiesta()
