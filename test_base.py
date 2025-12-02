@@ -1,8 +1,9 @@
-pos = [0,0]
-nuova_pos = [0,0]
-movimento = [0,0]
+mov = [7, 5]
 
-for i in range(len(movimento)):
-    movimento[i] = nuova_pos[i] - pos[i]
+movimento_x = mov[0]  # 7
+movimento_y = mov[1]  # 5
 
-print(movimento)
+# Arrotondamento al numero intero più vicino
+rapporto = round(movimento_x / movimento_y)
+
+print("rapporto:", rapporto)  # Output: 1
